@@ -1,0 +1,1 @@
+# Exercicios do da Seção 3 - dia 2
