@@ -1,0 +1,1 @@
+# Exemplos para fixar do da Seção 3 - dia 02 - Primeiros passos em CSS
