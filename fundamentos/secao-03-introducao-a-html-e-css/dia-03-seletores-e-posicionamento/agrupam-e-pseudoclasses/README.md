@@ -1,0 +1,1 @@
+# Exempo para fixar 3 - Agrupamento de seletores e pseudoclasses
