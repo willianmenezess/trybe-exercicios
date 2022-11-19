@@ -11,5 +11,14 @@ ol li:nth-of-type(odd) {
 }
 
 h1, h3 {
-    
+    color: red;
+}
+
+.italic {
+    font-style: italic;
+}
+
+h3.italic {
+    font-size: 40px;
+    border: 1px solid black;
 }
