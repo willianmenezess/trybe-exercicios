@@ -1,9 +1,11 @@
-div:hover { /*pseudoclasse para qdo passar o cursor em cima*/ 
+div:hover {
+    /*pseudoclasse para qdo passar o cursor em cima*/
     border: 5px solid black;
 }
 
 
-div:nth-of-type(1) {  /* nth-of-type = Para usar uma mesma pseudoclasse para varias divs diferentes, div 1, div 2, div3 ... */
+div:nth-of-type(1) {
+    /* nth-of-type = Para usar uma mesma pseudoclasse para varias divs diferentes, div 1, div 2, div3 ... */
     background-color: green;
     height: 25px;
 }
@@ -14,7 +16,7 @@ div:nth-of-type(2) {
 }
 
 div:nth-of-type(3) {
-    background-color:blue;
+    background-color: blue;
     height: 100px;
 }
 
@@ -28,26 +30,30 @@ div:nth-of-type(5) {
     height: 25px;
 }
 
-div:nth-of-type(1) > h3 { /* primeira div e primeiro h3 */
+div:nth-of-type(1)>h3 {
+    /* primeira div e primeiro h3 */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
 }
 
-div:nth-of-type(2) > h3 {
-    font-family:'Times New Roman', Times, serif;
+div:nth-of-type(2)>h3 {
+    font-family: 'Times New Roman', Times, serif;
 }
 
-div:nth-of-type(3) > h3 {
+div:nth-of-type(3)>h3 {
     font-style: italic;
 }
 
-div:nth-of-type(4) > h3 {
+div:nth-of-type(4)>h3 {
     color: aqua;
 }
 
-div:nth-of-type(5) > h3 {
+div:nth-of-type(5)>h3 {
     color: blue;
     font-style: italic;
 }
 
+/* Poderia trer usado isso, que deixa as tags ímpares de <h3> com o texto em itálico:
 
+div:nth-child(odd) h3 {
+    font-style: italic */
