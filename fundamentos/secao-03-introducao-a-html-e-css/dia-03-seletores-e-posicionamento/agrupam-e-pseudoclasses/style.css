@@ -1,0 +1,16 @@
+h1,
+p {
+    text-align: center;
+}
+
+li:hover {
+    background-color: dimgray;
+}
+
+li:active {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.estilo-lista {
+    list-style: none;
+}
