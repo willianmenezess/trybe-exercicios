@@ -1,26 +1,53 @@
-div:hover {
+div:hover { /*pseudoclasse para qdo passar o cursor em cima*/ 
     border: 5px solid black;
 }
 
-div:nth-of-type(1) {
+
+div:nth-of-type(1) {  /* nth-of-type = Para usar uma mesma pseudoclasse para varias divs diferentes, div 1, div 2, div3 ... */
     background-color: green;
+    height: 25px;
 }
 
 div:nth-of-type(2) {
     background-color: red;
+    height: 25px;
 }
 
 div:nth-of-type(3) {
     background-color:blue;
+    height: 100px;
 }
 
 div:nth-of-type(4) {
     background-color: yellow;
+    height: 25px;
 }
 
 div:nth-of-type(5) {
     background-color: magenta;
+    height: 25px;
 }
 
+div:nth-of-type(1) > h3 { /* primeira div e primeiro h3 */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+div:nth-of-type(2) > h3 {
+    font-family:'Times New Roman', Times, serif;
+}
+
+div:nth-of-type(3) > h3 {
+    font-style: italic;
+}
+
+div:nth-of-type(4) > h3 {
+    color: aqua;
+}
+
+div:nth-of-type(5) > h3 {
+    color: blue;
+    font-style: italic;
+}
 
 
