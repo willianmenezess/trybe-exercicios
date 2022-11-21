@@ -37,14 +37,14 @@ h1 {
   }
 
   .award {
-    background-color: cyan; 
+    /* background-color: cyan;  */
   }
 
   .award li {
     list-style: none;
     display: inline;
     width: 80%;
-    background-color: blue;
+    /* background-color: blue; */
     text-align: center;
     
   }
