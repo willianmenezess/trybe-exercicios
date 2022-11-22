@@ -22,3 +22,25 @@ h4 {
     background-color: red;
     width: 40%;
 }
+
+.fact-two {
+    height: 270px;
+    background-color: aqua;
+    width: 90%;
+    margin: 0;
+    overflow: auto;
+    /* overflow-x: 200px; */
+}
+
+.fact-two img {
+    height: 160px;
+    display: inline-block;
+
+}
+
+.fact-two p {
+    display: inline-block;
+    background-color: red;
+    width: 70%;
+    
+}
