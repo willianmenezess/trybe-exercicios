@@ -1,0 +1,1 @@
+# Exercicio pŕatico da Seção 3.4 - HTML Semântico
