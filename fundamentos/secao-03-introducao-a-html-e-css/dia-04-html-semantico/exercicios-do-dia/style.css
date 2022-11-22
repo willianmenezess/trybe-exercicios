@@ -1,0 +1,24 @@
+h4 {
+    margin:5px;
+    background-color: brown;
+}
+
+.fact-one {
+    height: 280px;
+    background-color: aqua;
+    width: 80%;
+    margin: 0;
+    overflow: auto;
+}
+
+.fact-one img {
+    height: 200px;
+    display: inline-block;
+    
+}
+
+.fact-one p {
+    display: inline-block;
+    background-color: red;
+    width: 40%;
+}
