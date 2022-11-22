@@ -85,3 +85,15 @@ h4 {
     
 }
 
+.bibliography li {
+    list-style: none;
+}
+
+footer p {
+    text-align: center;
+}
+
+nav li {
+    list-style: none;
+    /* background-color: aqua; */
+}
