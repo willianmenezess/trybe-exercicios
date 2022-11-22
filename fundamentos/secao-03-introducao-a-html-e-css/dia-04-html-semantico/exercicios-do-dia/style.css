@@ -1,11 +1,11 @@
 h4 {
     margin:5px;
-    background-color: brown;
+    /* background-color: brown; */
 }
 
 .fact-one {
-    height: 280px;
-    background-color: aqua;
+    height: 220px;
+    /* background-color: aqua; */
     width: 80%;
     margin: 0;
     overflow: auto;
@@ -19,28 +19,69 @@ h4 {
 
 .fact-one p {
     display: inline-block;
-    background-color: red;
-    width: 40%;
+    /* background-color: red;  */
+    width: 60%;
+    position: absolute;
+    text-align:justify;
+    
 }
 
 .fact-two {
-    height: 270px;
-    background-color: aqua;
-    width: 90%;
+    height: 300px;
+    /* background-color: aqua; */
     margin: 0;
     overflow: auto;
-    /* overflow-x: 200px; */
+    
 }
 
 .fact-two img {
-    height: 160px;
+    height: 280px;
     display: inline-block;
+    padding-left: 10px;
+    padding-right: 5px;
+    width: 30%;
+    
 
 }
 
 .fact-two p {
     display: inline-block;
-    background-color: red;
-    width: 70%;
+    /* background-color: red; */
+    width: 60%;
+    overflow: auto;
+    text-align: justify;
+}
+
+
+.fact-three {
+    height: 400px;
+    /* background-color: aqua; */
+    margin: 0;
+    overflow: auto;
     
 }
+
+ .fact-three img {
+    height: 240px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 10px;
+    width: 30%; 
+}
+
+.fact-three p {
+    display: block;
+    /* background-color: red; */
+    width: 80%;
+    overflow: auto;
+    /* position: absolute; */
+    /* border: 2px solid black; */
+    margin-left: 60px;
+    text-align:justify;
+}
+
+.image-three-section {
+    text-align:center;
+    
+}
+
