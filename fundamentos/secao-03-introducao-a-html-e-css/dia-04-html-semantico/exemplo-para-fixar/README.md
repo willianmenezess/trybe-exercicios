@@ -1,0 +1,1 @@
+# Exemplo para fixar da Seção 3.4 

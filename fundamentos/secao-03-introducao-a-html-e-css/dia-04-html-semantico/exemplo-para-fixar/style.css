@@ -1,0 +1,59 @@
+h1 {
+    text-align: center;
+  }
+
+  .first {
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    height: 50px;
+    text-align:center;
+    width: 200px;
+    list-style: none;
+    margin: auto;
+  }
+
+  .second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 48%;
+    display: inline-block;
+    
+  }
+
+  .third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 48%;
+    display: inline-block;
+    
+  }
+
+  .team-podium {
+    /* background-color:dimgray; */
+  }
+
+  .award {
+    /* background-color: cyan;  */
+  }
+
+  .award li {
+    list-style: none;
+    display: inline;
+    width: 80%;
+    /* background-color: blue; */
+    text-align: center;
+    
+  }
+
+  .award h3 {
+    text-align:center;
+  }
+
+  .award ul {
+    text-align: center;
+  }
+  
