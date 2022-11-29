@@ -1,0 +1,1 @@
+# Exercícios da Seção 4 - Introdução à JavaScript

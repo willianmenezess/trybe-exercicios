@@ -1,0 +1,1 @@
+# Exercicios (agora, a prática) da seção 4.2 - arrays e loop for
