@@ -9,7 +9,5 @@ for (let index = 1 ; index <= n ; index += 1){
     console.log(lineAsteris);
 }
 
-// for (let index2 = 1 ; index2 <= n ; index2 +=1){
-//     console.log(lineAsteris);
-// }
+
 
