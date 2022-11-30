@@ -1,8 +1,16 @@
-let word = 'tryber';
-let reverseword = '';
+// Escreva um programa que, dado um valor n qualquer, seja n > 1, imprima na tela um quadrado feito de asteriscos de lado de tamanho n. 
 
-console.log (reverseword = word.split(''));
 
-console.log (reverseword.reverse());
+let n = 6;
+let symbol = '*';
+let lineAsteris = '';
 
-console.log (reverseword.join(''));
+for (let index = 1 ; index <= n ; index += 1){
+    lineAsteris = lineAsteris + symbol;
+}
+
+for (let index2 = 1 ; index2 <= n ; index2 +=1){
+    console.log(lineAsteris);
+}
+
+
