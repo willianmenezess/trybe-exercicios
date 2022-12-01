@@ -1,0 +1,1 @@
+ # Parte 1 - Exercícios da Seção 4.5 - JavaScript ES6 - Let, const e arrow functions.
