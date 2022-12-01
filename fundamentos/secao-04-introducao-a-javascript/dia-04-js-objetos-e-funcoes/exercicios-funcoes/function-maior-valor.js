@@ -4,15 +4,17 @@
 
 
 function maxValue(array) {
-    let maximum = 0;
+    let maximumValue = 2;
+    let maximumIndice = 0;
 
     for (index = 1 ; index < array.length; index += 1) {
-        if (array[index] > maximum) {
-            maximum = index;
+        if (array[index] > maximumValue) {
+            maximumValue = array[index];
+            maximumIndice = index;
         }
     }
 
- return maximum
+ return maximumIndice
 }
 
 console.log(maxValue([2,3,6,7,10,1]));
