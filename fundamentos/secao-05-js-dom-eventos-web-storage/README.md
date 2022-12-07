@@ -1,0 +1,1 @@
+# Exercícios da Seção 5 - JavaScript: DOM, Eventos e Web Storage.
