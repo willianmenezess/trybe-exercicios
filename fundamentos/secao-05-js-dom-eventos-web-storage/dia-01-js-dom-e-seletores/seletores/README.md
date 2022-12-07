@@ -1,0 +1,1 @@
+# exercicio para fixar de Seletores da seção 5.1 => Administrador de tempo da trybe.
