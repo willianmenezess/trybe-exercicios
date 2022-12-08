@@ -1,0 +1,1 @@
+# exercicios para fixar do dia, no decorrer da seção 5.2.

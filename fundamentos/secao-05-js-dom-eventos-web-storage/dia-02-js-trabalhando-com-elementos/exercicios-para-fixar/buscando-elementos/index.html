@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício Buscando Elementos</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main id="paiDoPai">
+        <section id="pai">
+            <section id="primeiroFilho"></section>
+            <section id="elementoOndeVoceEsta">
+                <section id="primeiroFilhoDoFilho"></section>
+                <section id="segundoEUltimoFilhoDoFilho"></section>
+            </section>
+            Atenção!
+            <section id="terceiroFilho"></section>
+            <section id="quartoEUltimoFilho"></section>
+        </section>
+    </main>
+    <script>
+        // Acesse o elemento elementoOndeVoceEsta.
+        const elementOndeVcEsta = document.querySelector('#elementoOndeVoceEsta');
+
+        // Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+        const pai = elementOndeVcEsta.parentElement.style.color = 'green';
+
+        // Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+        const primeiroFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
+        primeiroFilhoDoFilho.innerHTML = 'Adicionando um texto ao primeiroFilhodoFilho';
+
+        // Acesse o primeiroFilho a partir de pai.
+        const primeiroFilhoDoPai = pai.firstElementChild;
+
+        // Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+        const primeiroFilho = elementOndeVcEsta.previousElementSibling;
+
+        // Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+        const atencao = elementOndeVcEsta.nextSibling;
+
+        // Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+        const terceiroFilho = elementOndeVcEsta.nextElementSibling;
+        
+        // Agora acesse o terceiroFilho a partir de pai.
+        const terceiroFilho2 = pai.lastElementChild.previousElementSibling;
+
+    </script>
+</body>
+
+</html>
