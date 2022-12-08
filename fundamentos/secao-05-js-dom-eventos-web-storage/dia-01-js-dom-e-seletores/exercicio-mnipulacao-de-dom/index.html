@@ -54,7 +54,7 @@
     
     function changeTheText() {
       let textAboutMe = document.getElementsByTagName('p')[1];
-      textAboutMe.innerText = 'Daqui a 2 anos quero estar trabalhando como desenvolvedor e cursando Ciência da Computação (ead)';
+      textAboutMe.innerText = 'Daqui a 2 anos quero estar trabalhando como desenvolvedor e cursando Ciência da Computação (ead).';
     }
     changeTheText();
 
@@ -82,7 +82,14 @@
     }
     changeParagraphOne()
 
-    
+    function displayTagsP() {
+      let tagsP = document.getElementsByTagName('p');
+      for (let index = 0 ; index < tagsP.length ; index +=1) {
+        console.log(tagsP[index].innerText);
+      }
+    }
+    displayTagsP()
+
 
 
   </script>
