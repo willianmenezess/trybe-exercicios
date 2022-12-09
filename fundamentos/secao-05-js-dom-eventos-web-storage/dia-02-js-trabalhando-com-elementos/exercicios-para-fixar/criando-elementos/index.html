@@ -23,7 +23,33 @@
     </main>
 
     <script>
+        // Crie um irmão para elementoOndeVoceEsta.
+        const sectionPai = document.querySelector('#pai');
+        let newSection = document.createElement('section');
+        newSection.className = 'irmão-do-elem-onde-vc-esta';
+        sectionPai.appendChild(newSection);
+            // console.log(sectionPai);
 
+    // Crie um filho para elementoOndeVoceEsta.
+        const elementOndeVcEsta = document.querySelector('#elementoOndeVoceEsta');
+        // console.log(elementOndeVcEsta);
+        let newSection2 = document.createElement('section');
+        newSection2.className = 'terceiroFilhodoFilho';
+        elementOndeVcEsta.appendChild(newSection2);
+        
+    // Crie um filho para primeiroFilhoDoFilho.
+        const primeiroFilhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
+        // console.log(primeiroFilhoDoFilho);
+        let newSection3 = document.createElement('section');
+        newSection3.className = 'filho-do-primeiro-filho-do-filho';
+        primeiroFilhoDoFilho.appendChild(newSection3);
+
+    // A partir desse filho criado, acesse terceiroFilho.
+        const terceiroFilho = document.querySelector('#filho-do-primeiro-filho-do-filho');
+        terceiroFilho.parentElement;
+        terceiroFilho.parentElement;
+        terceiroFilho.nextElementSibling;
+        console.log(terceiroFilho);
 
     </script>
 </body>
