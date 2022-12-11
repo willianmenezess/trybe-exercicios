@@ -70,7 +70,18 @@
     // Adicione a tag section com a classe right-content como filho da tag main criada no passo 2; OK
     // Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5; OK
     // Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, … como valores da lista. Essa lista deve ser filha do section criado no passo 6; OK
-    // Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
+    // Adicione 3 tags h3, todas sendo filhas do main criado no passo 2. OK
+
+    // Após criar as tags anteriores, você mostrou para a sua liderança como estava a estrutura inicial da página. Sua liderança então pediu para que você fizesse algumas alterações:
+
+    // Adicione a classe title na tag h1 criada; OK
+    // Adicione a classe description nas 3 tags h3 criadas;
+    // Remova a section criada no passo 5 (aquele que possui a classe left-content). Utilize a função .removeChild();
+    // Centralize a section criada no passo 6 (aquele que possui a classe right-content).
+    // De olho na dica 👀:: Para centralizar a section, basta configurar o margin-right: auto da section;
+
+    // Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content) para a cor verde;
+    // Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
     
     const body = document.getElementById('body');
     const h1Trybe = document.createElement('h1');
@@ -118,13 +129,15 @@
     const addH3MainSon = (numberH3) => {
         for (let index = 0; index < numberH3; index +=1){
             const addH3 = document.createElement('h3');
+            addH3.className = 'description';
             main.appendChild(addH3);
         }
     }
     addH3MainSon(3);
-    console.log(main);
+    
 
-
+    h1Trybe.className = "title";
+    console.log(body);
 
 
 
