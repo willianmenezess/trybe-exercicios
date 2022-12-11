@@ -69,7 +69,7 @@
     // Adicione a tag section com a classe left-content como filho da tag main criada no passo 2; OK
     // Adicione a tag section com a classe right-content como filho da tag main criada no passo 2; OK
     // Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5; OK
-    // Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, … como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+    // Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, … como valores da lista. Essa lista deve ser filha do section criado no passo 6; OK
     // Adicione 3 tags h3, todas sendo filhas do main criado no passo 2.
     
     const body = document.getElementById('body');
@@ -102,10 +102,31 @@
     img1.src = 'https://picsum.photos/200';
     img1.className = 'small-image';
     section2MainSOn.appendChild(img1);
-    console.log(main); 
-
-    const arrayNumbLi = ['1','2','3','4','5','6','7','8','9','10'];
     
+    const arrayNumbLi = ['1','2','3','4','5','6','7','8','9','10'];
+    const createUnorderedList = (array) => {
+        const unorderedList = document.createElement('ul');
+        section3MainSOn.appendChild(unorderedList);
+        for (let index = 0; index < array.length; index += 1){
+            const addNumb = document.createElement('li');
+            addNumb.innerHTML = `${array[index]}`;
+            unorderedList.appendChild(addNumb);
+        }
+    }
+    createUnorderedList(arrayNumbLi)
+
+    const addH3MainSon = (numberH3) => {
+        for (let index = 0; index < numberH3; index +=1){
+            const addH3 = document.createElement('h3');
+            main.appendChild(addH3);
+        }
+    }
+    addH3MainSon(3);
+    console.log(main);
+
+
+
+
 
 
 
