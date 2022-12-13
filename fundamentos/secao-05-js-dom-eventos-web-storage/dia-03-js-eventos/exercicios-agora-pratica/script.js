@@ -57,9 +57,17 @@ createDaysOfMoonth()
 // Adicione a este botão a ID "btn-holiday";
 // Adicione este botão como filho/filha da tag <div> com classe "buttons-container".
 
-const addButtonHollidays = () => {
+const addButtonHoliday = (nameButton) => {
+let buttonsContainer = document.querySelector('.buttons-container');
+let newButton = document.createElement('button');
 
+newButton.id = 'btn-holiday';
+newButton.innerHTML = nameButton;
+buttonsContainer.appendChild(newButton);
 }
+addButtonHoliday('Feriados');
+
+
 
 
 
