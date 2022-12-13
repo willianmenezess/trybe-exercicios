@@ -35,7 +35,7 @@ for (let index = 0; index < decemberDaysList.length; index += 1) {
   addDaysLi.innerHTML = `${day}`;
  
 
-  if (day === 24 || day === 25 || day === 31) {
+  if (day === 24 || day === 31) {
     addDaysLi.className = 'day holiday';
     ulDays.appendChild(addDaysLi);
   } else if (day === 4 || day === 11 || day === 18 || day === 25) {
@@ -46,7 +46,7 @@ for (let index = 0; index < decemberDaysList.length; index += 1) {
     ulDays.appendChild(addDaysLi);
   }
 }
-console.log(ulDays);
+// console.log(ulDays);
 }
 createDaysOfMoonth()
 
@@ -72,7 +72,7 @@ addButtonHoliday('Feriados');
 // Adicione ao botão "Feriados" um evento de "click" que altere a cor de fundo dos dias que possuem a classe "holiday".
 // É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial com a cor “rgb(238,238,238)”.
  
-// const selectHolidays = () => {
+const selectHolidays = () => {
   let getHolidayButton = document.querySelector('#btn-holiday');
   let getHolidays = document.querySelectorAll('.holiday');
   let backgroundColor = 'rgb(238,238,238)';
@@ -87,16 +87,49 @@ addButtonHoliday('Feriados');
       }
     }
   })
-// }  
-// selectHolidays()
+}  
+selectHolidays()
 
 
-// newButton.addEventListener('click', () => {
-  
-//   let classHoliday = document.querySelector('.holiday');
-//   classHoliday.style.backgroundColor = 'green';
-//   })
+// PARTE 4
+// Implemente uma função que crie dinamicamente um botão com o nome "Sexta-feira";
+// Sua função deve receber como parâmetro a string “Sexta-feira”;
+// Adicione a esse botão o ID "btn-friday";
+// Adicione esse botão como filho/filha da tag <div> com classe "buttons-container".
 
+const createFridayButton = (newbutton) => {
+let buttonFriday = document.createElement('button');
+let buttonsContainer = document.querySelector('.buttons-container');
+buttonFriday.id = 'btn-friday';
+buttonFriday.innerHTML = newbutton;
+buttonsContainer.appendChild(buttonFriday);
+}
+createFridayButton('Sexta-feira');
+
+// PARTE 5
+// Implemente uma função que modifica o texto exibido nos dias que são Sexta-feira;
+// Adicione ao botão “Sexta-feira” um evento de “click” e modifique o texto a ser exibido nos dias que são sextas-feiras.
+
+
+const modifyTextFriday = (fridaysArray) => {
+  let getFridays = document.querySelectorAll('.friday');
+  let getFridayButton = document.querySelector('#btn-friday');
+  let newFridayText = "Sextou!!!"
+  console.log (getFridays);
+
+  getFridayButton.addEventListener('click', () => {
+    for (let index = 0; index < getFridays.length; index += 1) {
+      if (getFridays[index].innerHTML !== newFridayText) {
+        getFridays[index].innerHTML = newFridayText;
+      }else {
+        getFridays[index].innerHTML = fridaysArray[index];
+      }
+
+    }
+
+})
+}
+modifyTextFriday(['4', '11', '18', '25']);
 
 
 
