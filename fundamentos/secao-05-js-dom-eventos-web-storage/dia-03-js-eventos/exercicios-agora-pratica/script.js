@@ -25,31 +25,41 @@ const createDaysOfTheWeek = () => {
 
 const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
-const weekDays = document.querySelector('.week-days');
-weekDays.id = 'days';
+const createDaysOfMoonth = () => {
+let ulDays = document.querySelector('#days');
 
 for (let index = 0; index < decemberDaysList.length; index += 1) {
   
-  const addWeekDaysLi = document.createElement('li');
-  addWeekDaysLi.innerHTML = `${decemberDaysList[index]}`;
-  addWeekDaysLi.className = 'day';
-  weekDays.appendChild(addWeekDaysLi);
+  let addDaysLi = document.createElement('li');
+  let day = decemberDaysList[index];
+  addDaysLi.innerHTML = `${day}`;
+ 
 
-  if (decemberDaysList [index] === 24 || decemberDaysList [index] === 25 || decemberDaysList [index] === 31) {
-    addWeekDaysLi.classList.add('holiday');
+  if (day === 24 || day === 25 || day === 31) {
+    addDaysLi.className = 'day holiday';
+    ulDays.appendChild(addDaysLi);
+  } else if (day === 4 || day === 11 || day === 18 || day === 25) {
+    addDaysLi.className = 'day friday';
+    ulDays.appendChild(addDaysLi);
+  } else {
+    addDaysLi.className = 'day';
+    ulDays.appendChild(addDaysLi);
   }
-  
-  if (decemberDaysList [index] === 4 || decemberDaysList [index] === 11 || decemberDaysList [index] === 18 || decemberDaysList [index] === 25) {
-    addWeekDaysLi.classList.add('friday');
-  }
-  // console.log(addWeekDaysLi);
 }
+console.log(ulDays);
+}
+createDaysOfMoonth()
+
 
 // PARTE 2
 // Implemente uma função que crie dinamicamente um botão com o nome “Feriados”;
 // Sua função deve receber um parâmetro com a string 'Feriados';
 // Adicione a este botão a ID "btn-holiday";
 // Adicione este botão como filho/filha da tag <div> com classe "buttons-container".
+
+const addButtonHollidays = () => {
+
+}
 
 
 
