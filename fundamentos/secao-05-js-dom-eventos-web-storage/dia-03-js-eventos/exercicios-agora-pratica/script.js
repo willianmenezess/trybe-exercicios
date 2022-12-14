@@ -115,7 +115,7 @@ const modifyTextFriday = (fridaysArray) => {
   let getFridays = document.querySelectorAll('.friday');
   let getFridayButton = document.querySelector('#btn-friday');
   let newFridayText = "Sextou!!!"
-  console.log (getFridays);
+  // console.log (getFridays);
 
   getFridayButton.addEventListener('click', () => {
     for (let index = 0; index < getFridays.length; index += 1) {
@@ -190,4 +190,63 @@ const addColorLegend = (color) => {
 }
 addColorLegend("red");
 
+
+// PARTE 9 - NAO TA FUNCIONANDO
+// Implemente uma função que selecione uma tarefa;
+// Adicione um evento que ao clicar no elemento com a tag <div> referente à cor da sua tarefa, atribua a esse elemento a classe task selected, ou seja, quando sua tarefa possuir a classe task selected ela estará selecionada;
+// Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task, ou seja, essa tarefa está deixando de ser uma tarefa selecionada.
+
+// const selectTask = () => {
+//   let task  = document.querySelector('.task');
+//   let taskSelected = document.getElementsByClassName('task selected');
+  
+//   task.addEventListener('click', (event) => {
+//     if (taskSelected.length === 0) {
+//       event.target.className = "task selected";
+//     }else {
+//       event.target.className = 'task';
+//     }
+//   });
+// }
+// selectTask();
+
+const setTaskClass = () => {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let myTasks = document.querySelector('.task');
+  myTasks.addEventListener('click', (event) => {
+    if (selectedTask.length === 0) {
+      event.target.className = 'task selected';
+    } else {
+      event.target.className = 'task';
+    }
+  });
+}
+setTaskClass();
+
+// PAERTE 10
+// Implemente uma função que atribua a cor da tarefa ao dia do calendário;
+// Adicione um evento que, ao clicar em um dia do mês no calendário, atribua a esse dia a cor da legenda da sua tarefa selecionada;
+// Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119).
+
+const cookingDay = () => {
+
+ let taskSelected = document.getElementsByClassName('task selected');
+ let days = document.querySelector('#days');
+ let taskDiv = document.querySelector('.task');
+ let taskColor = taskDiv.style.backgroundColor;
+
+ days.addEventListener ('click', (event) => {
+  let eventTargetColor = event.target.style.backgroundColor = taskColor;
+
+  if (taskSelected.length > 0 && eventTargetColor !== taskColor ) {
+    let color = taskSelected[0].style.backgroundColor;
+    event.target.style.color = color;
+  } else if (eventTargetColor === taskColor) {
+    event.target.style.backgroundColor = 'rgb(119,119,119)';
+  }
+ })
+
+}
+
+cookingDay();
 
