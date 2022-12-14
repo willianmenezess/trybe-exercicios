@@ -132,11 +132,62 @@ const modifyTextFriday = (fridaysArray) => {
 modifyTextFriday(['4', '11', '18', '25']);
 
 
+// PARTE 6
+// Implemente duas funções que criem um efeito de “zoom”;
+// Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+
+const zoomDayHigh = () => {
+  let day = document.getElementById('days');
+
+  day.addEventListener('mouseover', (event) => {
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
+  })
+
+}
+
+zoomDayHigh();
+
+const zoomDayDown = () => {
+  let day = document.getElementById('days');
+  
+  day.addEventListener('mouseout', (event) => {
+    event.target.style.fontSize = '20px';
+    event.target.style.fontWeight = '200';
+  })
+
+}
+
+zoomDayDown();
+
+// PARTE 7
+// Implemente uma função que adicione uma tarefa personalizada ao calendário;
+// A função deve receber como parâmetro a string com o nome da tarefa (ex: “cozinhar”) e criar dinamicamente um elemento com a tag <span> contendo a tarefa;
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
+
+const addAssigment = (assigment) => {
+
+  let tagCook = document.createElement('span');
+  let myTasks = document.querySelector('.my-tasks');
+  tagCook.innerHTML = assigment;
+  myTasks.appendChild(tagCook);
+}
+addAssigment('cozinhar');
 
 
+// PARTE 8
+// Implemente uma função que adicione uma legenda com cor para a tarefa;
+// Essa função deverá receber como parâmetro uma string (‘cor’) e criar dinamicamente um elemento de tag <div> com a classe task;
+// O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada;
+// O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
 
-
-
-
+const addColorLegend = (color) => {
+  let legend = document.createElement('div');
+  legend.className = 'task';
+  legend.style.backgroundColor = color;
+  let myTasks = document.querySelector('.my-tasks');
+  myTasks.appendChild(legend);
+}
+addColorLegend("red");
 
 
