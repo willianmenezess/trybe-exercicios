@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+<body>
+    <script>
+        const validate = new window.JustValidate('#form');
+      </script>
+
+    <form action="#" id="form" autocomplete="off">
+        <label for="name">Enter your name</label>
+        <input
+          type="text"
+          class="form__input form-control"
+          placeholder="Enter your name"
+          autocomplete="off"
+          name="name"
+          id="name"
+        />
+        <label for="email">Enter your email</label>
+        <input
+          type="email"
+          class="form__input form-control"
+          placeholder="Enter your email"
+          autocomplete="off"
+          name="email"
+          id="email"
+        />
+        <button class="btn btn-primary" id="submit-btn">Submit</button>
+      </form>
+</body>
+</html>
