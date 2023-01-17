@@ -37,6 +37,10 @@ aside {
     padding: 15px;
 }
 
+aside > ul {
+   list-style: none;
+}
+
 h1 {
     font-size: 24px;
 }
@@ -49,3 +53,33 @@ footer {
     padding: 15px;
 }
 
+@media only screen and (min-width: 768px) {
+    header p {
+        font-size: 30px;
+        width: 55%;
+    }
+
+    h2 {
+        font-size: 25px;
+     }
+
+    .container {
+        padding: 30px;
+
+    }
+
+    .aside-one > ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+     }
+
+     header {
+        display: flex;
+     }
+
+     header > nav > ul > li {
+        margin: 10px;
+     }
+   
+}
