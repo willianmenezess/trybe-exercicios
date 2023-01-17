@@ -83,3 +83,36 @@ footer {
      }
    
 }
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        padding: 70px;
+
+    }
+
+    .aside-one > ul {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+     }
+
+     header {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+     }
+
+    #chapters-info {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+
+    #text {
+        display: flex;
+    }
+
+    #text > div {
+       padding: 10px;
+    }
+}
