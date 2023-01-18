@@ -18,23 +18,34 @@
 	<p id='result'></p>
 	<script>
 
-			const verifyBlankSpace = (a,b) => {
+		const verifyBlankSpace = (a, b) => {
 			if (Number(a) === '' || Number(b) === "" || Number(a) === 0 || Number(b) === 0) {
 				throw new Error('insira os dois valores numéricos');
 			}
 		};
 
+		const verifyNaN = (a, b) => {
+			if (isNaN(a) || isNaN(b)) {
+				throw new Error('insira valores numéricos');
+			}
+		};
+
+
+
 		function sum() {
 			try {
-			const value1 = document.getElementById('value1').value;
-			const value2 = document.getElementById('value2').value;
-			verifyBlankSpace(value1,value2);
-			const result = Number(value1) + Number(value2);
-			document.getElementById('result').innerHTML = `Resultado: ${result}`;
-			document.getElementById('value1').value = '';
-			document.getElementById('value2').value = '';
+				const value1 = document.getElementById('value1').value;
+				const value2 = document.getElementById('value2').value;
+				verifyBlankSpace(value1, value2);
+				verifyNaN(value1, value2);
+				const result = Number(value1) + Number(value2);
+				document.getElementById('result').innerHTML = `Resultado: ${result}`;
 			} catch (error) {
 				alert(error.message);
+				document.getElementById('result').innerHTML = '';
+			} finally {
+				document.getElementById('value1').value = '';
+				document.getElementById('value2').value = '';
 			}
 		};
 
