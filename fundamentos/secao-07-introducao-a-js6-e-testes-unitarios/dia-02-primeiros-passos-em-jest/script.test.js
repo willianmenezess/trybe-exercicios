@@ -1,6 +1,6 @@
-// myRemove.test.js
+// script.test.js
 
-const { myRemove } = require('./myRemove.js');
+const { myRemove, myFizzBuzz } = require('./script.js');
 
 describe('remove number from array', () => {
 
@@ -16,5 +16,13 @@ describe('remove number from array', () => {
         expect(myRemove([1, 2, 3, 4], 5)).toEqual([1, 2, 3, 4]);
     });
 
+
+})
+
+describe('Recebe número e verifica se é divisível por 3 e 5 para ser FizzBuzz', () => {
+
+    test('Verifica se 15 é FizzBuzz', () => {
+        expect(myFizzBuzz(15)).toBe('fizzbuzz');
+    });
 
 })
