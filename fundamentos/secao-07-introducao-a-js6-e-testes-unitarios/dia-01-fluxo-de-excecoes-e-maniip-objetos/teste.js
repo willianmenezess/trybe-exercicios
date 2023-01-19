@@ -34,4 +34,6 @@ const order = {
     },
   };
 
-  console.log(order.address.street); 
+  
+  const drinks = order.order.drinks.coke.type;
+  console.log(drinks); 
