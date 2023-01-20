@@ -1,6 +1,6 @@
 // script.test.js
 
-const { myRemove, myFizzBuzz } = require('./script.js');
+const { myRemove, myFizzBuzz, mapString, encode, decode } = require('./script.js');
 
 describe('remove number from array.', () => {
 
@@ -39,5 +39,32 @@ describe('Recebe número e verifica se é divisível por 3 e 5 para ser FizzBuzz
     
     it('Verifica se o valor de entrada não é um número', () => {
         expect(myFizzBuzz('palmeiras')).toBe(false);
+    });
+})
+
+describe('Testa as funções encode e decode, transformando vogais em números e vice-versa', () => {
+
+    it('Testa se encode e decode são funções.', () => {
+        expect(typeof encode === 'function' && typeof decode === 'function').toBe(true);
+    });
+
+    it('Testa se encode converte a,e,i,o,u em 1,2,3,4,5', () => {
+        expect(encode('aeiou')).toEqual('12345');
+    });
+
+    it('Testa se decode converte 1,2,3,4,5 em a,e,i,o,u', () => {
+        expect(decode('12345')).toEqual('aeiou');
+    });
+
+    it('Testa se decode converte 1,2,3,4,5 em a,e,i,o,u, mas não outros números', () => {
+        expect(decode('12345678')).toEqual('aeiou678');
+    });
+
+    it('Testa se encode converte a,e,i,o,u em 1,2,3,4,5 respectivamente, mas não outras letras do alfabeto', () => {
+        expect(encode('aeiouxyz')).toEqual('12345xyz');
+    });
+
+    it('Testa se o retorno da função tem o número de caracteres definido', () => {
+        expect(decode('palmeiras').length).toEqual(9);
     });
 })
