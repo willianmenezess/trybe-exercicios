@@ -49,9 +49,9 @@ const professionalBoard = [
         }   
     }
 
-    if (!findEmployee) {
-        throw new Error("ID não identificado");
-    }
+    // if (!findEmployee) {
+    //     throw new Error("ID não identificado");
+    // }
 
     return findEmployee[detail];
   };
