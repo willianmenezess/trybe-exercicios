@@ -10,5 +10,12 @@ describe('Exercício de teste seção 7.3', () => {
   it('verifica se o return tem a msg "Boas Vindas,"', () => {
     expect(printMessage(info)).toMatch('Boas vindas,');
   });
+  
+  it('verifica se mansagem de erro é lançada caso objeto seja inválido', () => {
+    const info = 'palmeiras'
+    expect(() => { printMessage(info); }).toThrow();
+    expect(() => { printMessage(info); }).toThrow(new Error('objeto inválido'));
+  });
 
 });
+
