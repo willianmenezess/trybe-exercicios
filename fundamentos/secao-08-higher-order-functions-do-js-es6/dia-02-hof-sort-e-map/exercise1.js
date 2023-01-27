@@ -64,3 +64,10 @@ const books = [
 
 //   Crie um array com strings no formato NOME_DO_LIVRO - GÊNERO_DO_LIVRO - NOME_DA_PESSOA_AUTORA
 
+const createArrayStrings = () => {
+    const getBook = books.map((book) => {
+        return `${book.name} - ${book.genre} - ${book.author.name}`
+    })
+ return getBook;
+}
+console.log(createArrayStrings());
