@@ -5,5 +5,10 @@ const expectedResult = [ 'Fundação', 'Duna' ];
 
 const booksByAuthorBirthYear = (birthYear) => {
   // escreva seu código aqui
-}
+  const getBooks = data.books.filter((book) => book.author.birthYear === birthYear);
+  const arrayNames = getBooks.map((book) => book.name);
+  return arrayNames;
+};
+
 const result = booksByAuthorBirthYear(1920);
+console.log(result);
