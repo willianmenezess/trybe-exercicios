@@ -31,7 +31,7 @@ const people = [
   
   // escreva filterPeople abaixo
 
-//   Como uso do ...people, faço o espalhamento dos objetos que estão dentro do array de objetos e cada objeto entra espalhado como parâmetro de filterpeople:
+
   const filterPeople = (arrayPersons) => {
     const filterAustralian = arrayPersons.filter(({nationality, bornIn}) => {
         return nationality === 'Australian' && bornIn > 1900 && bornIn < 2001;
@@ -40,3 +40,14 @@ const people = [
   };
 
   console.log(filterPeople(people));
+
+//    OUTRA FORMA DE RESOLVER:
+
+//   const filterPeople = (arrayPersons) => {
+//     const filterAustralian = arrayPersons.filter((person) => {
+//         return person.nationality === 'Australian' && person.bornIn > 1900 && person.bornIn < 2001;
+//     });
+//     return filterAustralian;
+//   };
+
+//   console.log(filterPeople(people));
