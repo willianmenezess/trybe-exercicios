@@ -1,0 +1,1 @@
+# Exercicios da seção 5.4 - Web Storage
