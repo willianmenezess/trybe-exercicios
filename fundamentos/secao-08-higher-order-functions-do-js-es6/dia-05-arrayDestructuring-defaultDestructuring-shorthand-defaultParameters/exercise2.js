@@ -6,12 +6,6 @@ const chiron = ['Chiron', 'Bugatti', 2016];
 
 // escreva toObject abaixo
 
-const toObject = ([car, marca, age]) => {
-    return {
-        car,
-        marca,
-        age, 
-    }
-}
+const toObject = ([car, marca, age]) => ({car, marca, age,});
 
 console.log(toObject(palio));
