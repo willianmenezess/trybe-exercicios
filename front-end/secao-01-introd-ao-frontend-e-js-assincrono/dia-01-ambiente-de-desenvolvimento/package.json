@@ -1,0 +1,18 @@
+{
+  "name": "validador-de-campos",
+  "version": "1.0.0",
+  "description": "exercicio seção 1.1 - modulo frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite --open",
+    "build": "vite build"
+  },
+  "author": "Willian Menezes",
+  "license": "ISC",
+  "dependencies": {
+    "@trybe/eslint-config-frontend": "^1.8.3",
+    "validator": "^13.9.0",
+    "vite": "^4.1.1"
+  }
+}
