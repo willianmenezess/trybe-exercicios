@@ -1,0 +1,1 @@
+# Exercicios da Seção 2.1 (Front-end) - Hello Word no React
