@@ -20,13 +20,20 @@ const update = async (id, data) => {
 		{ ...data },
 		{ where: { id } },
 	);
-	console.log(updatedBook);
+	console.log('bookUpdated:', updatedBook);
 	return {message: 'Book updated!'};
 }
+
+const deleteBook = async (id) => {
+	const bookdelete = await Book.destroy({ where: { id } });
+	console.log('bookDelete:', bookdelete);
+	return {message: 'Book deleted!'};
+};
 
 module.exports = {
 	getAll,
 	getById,
 	create,
 	update,
+	deleteBook,
 };

@@ -26,9 +26,16 @@ const update = async (req, res) => {
 	res.status(200).json(updatedBook);
 }
 
+const deleteBook = async (req, res) => {
+	const { id } = req.params;
+	const deletedBook = await BookService.deleteBook(id);
+	res.status(200).json(deletedBook);
+};
+
 module.exports = {
 	getAll,
 	getById,
 	create,
 	update,
+	deleteBook,
 };
