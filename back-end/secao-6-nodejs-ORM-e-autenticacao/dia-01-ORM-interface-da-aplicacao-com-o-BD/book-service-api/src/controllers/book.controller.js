@@ -1,6 +1,11 @@
 const BookService = require('../services/book.service');
 
 const getAll = async (req, res) => {
+  const { author } = req.query;
+	if(author) {
+		const books = await BookService.getByAuthor(author);
+		return res.status(200).json(books);
+	}
   const books = await BookService.getAll();
   res.status(200).json(books);
 };
@@ -13,15 +18,15 @@ const getById = async (req, res) => {
 }
 
 const create = async (req, res) => {
-	const { title, author, pageQuantity } = req.body;
-	const newBook = await BookService.create(title, author, pageQuantity);
+	const { title, author, pageQuantity, publisher } = req.body;
+	const newBook = await BookService.create(title, author, pageQuantity, publisher);
 	res.status(201).json(newBook);
 }
 
 const update = async (req, res) => {
 	const { id } = req.params;
-	const { title, author, pageQuantity } = req.body;
-	const data = { title, author, pageQuantity };
+	const { title, author, pageQuantity, publisher } = req.body;
+	const data = { title, author, pageQuantity, publisher };
 	const updatedBook = await BookService.update(id, data);
 	res.status(200).json(updatedBook);
 }
