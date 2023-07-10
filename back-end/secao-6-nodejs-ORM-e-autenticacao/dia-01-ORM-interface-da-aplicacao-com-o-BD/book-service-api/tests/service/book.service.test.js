@@ -4,7 +4,7 @@ const { Book } = require('../../src/models');
 const BookService = require('../../src/services/book.service');
 
 
-describe('BookService', () => {
+describe('Realizando testes - BOOK SERVICE', () => {
 	const booksFromModel = [
 		{
 			id: 2,
