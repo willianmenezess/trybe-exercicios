@@ -46,4 +46,12 @@ export default class Order {
 	set discount(value: number) {
 		this._discount = value;
 	}
+
+	total(): number {
+		return this._items.reduce((acc, item) => acc + item.price, 0);
+	};
+
+	totalWithDiscount(): number {
+		return this.total() - (this.total() * this._discount);
+	}
 }
