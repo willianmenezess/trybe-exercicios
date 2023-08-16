@@ -54,14 +54,20 @@ class Student {
     return [...this._examsGrades, ...this._assignmentsGrades].reduce((acc, curr) => acc + curr, 0);
   }
 
-  averageExamsGrades(): number {
-    return Math.round(this.sumGrades() / this._examsGrades.length);
+  averageGrades(): number {
+    return Math.round(this.sumGrades() / (this._examsGrades.length + this._assignmentsGrades.length));
   }
 }
 
 // Testando a classe Student
+
 const student1 = new Student('123456', 'João');
+// console.log(student1);
+// student1.enrollment = '1234567';
+// student1.name = 'João da Silva';
+// console.log(student1);
+student1.examsGrades = [10, 8, 9, 7];
+student1.assignmentsGrades = [10, 9];
 console.log(student1);
-student1.enrollment = '1234567';
-student1.name = 'João da Silva';
-console.log(student1);
+console.log('Soma de todas as notas:', student1.sumGrades());
+console.log('Média de todas as notas:', student1.averageGrades());
