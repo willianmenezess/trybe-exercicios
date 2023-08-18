@@ -5,12 +5,12 @@ import normas from './normas/normasDeUso';
 
 export default class QuadraFutebol extends Quadra {
 	public futebolData: IFutebol = normas.futebol;
-	protected reservar<IFutebol>(horaReserva: Date): IAgenda<IFutebol> {
+	public reservar<IFutebol>(horaReserva: Date): IAgenda<IFutebol> {
 		return {
 			protocolo: Math.random().toString(36).substring(2, 15),
 			data: horaReserva,
-			regras: this.futebolData,
-		} as IAgenda<IFutebol>;
+			regras: this.futebolData as IFutebol,
+		};
 	}
   
 };
