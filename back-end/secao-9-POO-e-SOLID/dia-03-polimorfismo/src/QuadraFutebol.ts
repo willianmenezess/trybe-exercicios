@@ -9,7 +9,7 @@ export default class QuadraFutebol extends Quadra {
 		return {
 			protocolo: Math.random().toString(36).substring(2, 15),
 			data: horaReserva,
-			regras: this.futebolData as IFutebol,
+			regras: this.futebolData as unknown as IFutebol,
 		};
 	}
   
