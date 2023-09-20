@@ -31,3 +31,6 @@ def test_fizzbuzz_divisible_by_five_and_three_should_be_fizzbuzz():
 
 # removendo dependências:
 # pip uninstall -r requirements.txt -y (remove as depend. do requirements.txt)
+
+# comando para rodar o teste em específico:
+# python3 -m pytest tests/test_exercicio_5.py
