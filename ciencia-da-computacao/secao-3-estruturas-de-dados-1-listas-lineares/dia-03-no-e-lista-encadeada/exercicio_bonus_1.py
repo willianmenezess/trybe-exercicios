@@ -1,5 +1,4 @@
 from linked_list import LinkedList
-
 # input: 1 -> 1 -> 2
 # saída: 1 -> 2
 
