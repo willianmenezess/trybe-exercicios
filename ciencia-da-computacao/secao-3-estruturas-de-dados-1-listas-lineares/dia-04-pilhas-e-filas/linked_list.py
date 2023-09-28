@@ -108,3 +108,15 @@ class LinkedList:
             current_value = current_value.next
             position += 1
         return -1
+
+
+if __name__ == "__main__":
+    # teste da classe LinkedList
+    linked_list = LinkedList()
+    print(linked_list)
+    print(linked_list.is_empty())
+    linked_list.insert_first(1)
+    linked_list.insert_first(2)
+    linked_list.insert_first(3)
+    print(linked_list)
+    print(linked_list.get_element_at(0))
