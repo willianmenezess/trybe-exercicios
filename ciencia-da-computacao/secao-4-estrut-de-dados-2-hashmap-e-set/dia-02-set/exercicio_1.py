@@ -26,18 +26,21 @@ def blefe_game(entrada: dict) -> str:  # complexidade O(n)
     conj_1 = set(player_1[1])
     conj_2 = set(player_2[1])
 
-    point_1 = max(conj_1.difference(conj_2))
-    reductor_1 = min(conj_1.difference(conj_2))
-    total_point_1 = point_1 - reductor_1
+    total_point_1 = calculate_total_point(conj_1, conj_2)
 
-    point_2 = max(conj_2.difference(conj_1))
-    reductor_2 = min(conj_2.difference(conj_1))
-    total_point_2 = point_2 - reductor_2
+    total_point_2 = calculate_total_point(conj_2, conj_1)
 
     if total_point_1 > total_point_2:
         return player_1[0]
     else:
         return player_2[0]
+
+
+def calculate_total_point(conj, other_conj):
+    point = max(conj.difference(other_conj))
+    reductor = min(conj.difference(other_conj))
+    total_point = point - reductor
+    return total_point
 
 
 if __name__ == "__main__":
