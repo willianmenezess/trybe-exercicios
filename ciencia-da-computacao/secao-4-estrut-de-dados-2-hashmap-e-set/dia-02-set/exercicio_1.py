@@ -31,9 +31,11 @@ def blefe_game(entrada: dict) -> str:  # complexidade O(n)
     total_point_2 = calculate_total_point(conj_2, conj_1)
 
     if total_point_1 > total_point_2:
-        return player_1[0]
+        return f'{player_1[0]} ganhou!'
+    elif total_point_1 < total_point_2:
+        return f'{player_2[0]} ganhou!'
     else:
-        return player_2[0]
+        return 'Deu empate!'
 
 
 def calculate_total_point(conj, other_conj):
