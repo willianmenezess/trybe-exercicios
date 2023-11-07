@@ -6,8 +6,9 @@ URL_BASE = (
 response = requests.get(URL_BASE)
 selector = Selector(text=response.text)
 
-# extração dos campos título, preço, descrição
-# e url contendo a imagem de capa do livro:
+# extração dos campos título, preço, descrição,
+# url contendo a imagem de capa do livro
+# retornar também quantos livros estão disponíveis:
 title = selector.css(".product_main h1::text").get()
 price = selector.css(
     ".product_main .price_color::text").re_first(r"£\d+\.\d{2}")
@@ -16,4 +17,5 @@ suffix = "...more"
 if description.endswith(suffix):
     description = description[: -len(suffix)]
 image_url = URL_BASE + selector.css(".thumbnail img::attr(src)").get()
-print(title, price, description, image_url)
+qtity_products = selector.css(".instock.availability::text").re_first(r"\d+")
+print(title, price, description, image_url, qtity_products, sep="\n")
