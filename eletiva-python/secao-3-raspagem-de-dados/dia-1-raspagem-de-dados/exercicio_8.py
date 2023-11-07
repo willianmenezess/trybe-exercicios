@@ -15,5 +15,8 @@ for img_url in flags_urls:
     image_selector = Selector(text=image_detail.text)
     full_image_url = image_selector.css(".fullImageLink a::attr(href)").get()
     image_content = requests.get(f"https:{full_image_url}").content
+
+    # salva a imagem no diretório country_flags
+    # wb = write binary => imagem é salva em binário
     with open(f"./country_flags/{filename}", "wb") as f:
         f.write(image_content)
