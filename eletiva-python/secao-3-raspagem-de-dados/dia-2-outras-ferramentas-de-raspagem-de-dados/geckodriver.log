@@ -46,3 +46,6 @@ Read port: 43711
 Read port: 43711
 Read port: 43711
 Read port: 40367
+1699466751421	geckodriver	INFO	Listening on 127.0.0.1:49173
+1699466755126	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... x/common/.mozilla/firefox/gk81b50v.willian" "--remote-debugging-port" "42641" "--remote-allow-hosts" "localhost" "-no-remote"
+Read port: 40367
